@@ -11,6 +11,7 @@ Wanna learn vocabulary before/after watching a Netflix series? Then this guide i
   - Uncompress the zip file to get the subtitles in *.vtt format
 
 - Convert subtitles to text file
+  - Download `vvt_convert.py` from [here](https://raw.githubusercontent.com/hiiwave/netflix-vocab-builder/master/vvt_convert.py)
   - Open your terminal and run
     `python vvt_transform.py path/to/your/*en*.vtt -o converted.txt`
   - It then converts the full text into `converted.txt`
