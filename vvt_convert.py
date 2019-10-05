@@ -31,11 +31,12 @@ def remove_format(s: str) -> str:
     "Baby, don't get hooked on me"
 
     >>> remove_format('<c.white><c.mono_sans> SO NO ONE TOLD YOU</c.mono_sans></c.white>')
-    ' SO NO ONE TOLD YOU'
+    'So no one told you'
 
     """
     for matched in re.findall(r'\<\/?[^<>]*\>', s):
         s = s.replace(matched, '')
+    s = s.strip().capitalize()
     return s
 
 
