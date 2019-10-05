@@ -1,4 +1,4 @@
-from vvt_convert import cli, convert
+from vtt_convert import cli, convert
 from click.testing import CliRunner
 from pathlib import Path
 
