@@ -18,9 +18,14 @@ def transform(full_text: str) -> str:
     ret = []
     for para in paragraphs[4:]:
         parsed = _parse_para(para)
+        parsed = remove_format(parsed)
         ret.append(parsed)
     ret = '\n'.join(ret)
-    ret = remove_format(ret)
+    return ret
+
+
+def _parse_para(para: str) -> str:
+    ret = '\n'.join(para.strip().split('\n')[2:])
     return ret
 
 
@@ -38,11 +43,6 @@ def remove_format(s: str) -> str:
         s = s.replace(matched, '')
     s = s.strip().capitalize()
     return s
-
-
-def _parse_para(para: str) -> str:
-    ret = '\n'.join(para.strip().split('\n')[2:])
-    return ret
 
 
 if __name__ == '__main__':
