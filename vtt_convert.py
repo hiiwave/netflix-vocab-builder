@@ -7,20 +7,25 @@ import re
 @click.argument('vtt_files', nargs=-1)
 @click.option('-o', '--output', default='converted.txt')
 def cli(vtt_files, output):
-    result = [transform(Path(v).read_text(errors='ignore')) for v in vtt_files]
+    result = [convert(Path(v).read_text(errors='ignore')) for v in vtt_files]
     result = '\n\n'.join(result)
     Path(output).write_text(result)
     print('Created ' + output)
 
 
-def transform(full_text: str) -> str:
+def convert(full_text: str) -> str:
     paragraphs = full_text.split('\n\n')
     ret = []
     for para in paragraphs[4:]:
         parsed = _parse_para(para)
+        parsed = remove_format(parsed)
         ret.append(parsed)
-    ret = '\n'.join(ret)
-    ret = remove_format(ret)
+    ret = '\n'.join(ret) + '\n'
+    return ret
+
+
+def _parse_para(para: str) -> str:
+    ret = '\n'.join(para.strip().split('\n')[2:])
     return ret
 
 
@@ -38,11 +43,6 @@ def remove_format(s: str) -> str:
         s = s.replace(matched, '')
     s = s.strip().capitalize()
     return s
-
-
-def _parse_para(para: str) -> str:
-    ret = '\n'.join(para.strip().split('\n')[2:])
-    return ret
 
 
 if __name__ == '__main__':

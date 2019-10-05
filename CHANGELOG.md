@@ -6,8 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Testing
+
 ### Chagned
 - Each sentence is now capitalized
+- Fix typo `vvt_convert` to `vtt_convert` (!incompatible)
 
 ## [0.1.1] - 2019-10-06
 

@@ -1,0 +1,22 @@
+WEBVTT
+
+NOTE Netflix
+NOTE Profile: webvtt-lssdh-ios8
+NOTE Date: 2014/10/04 11:51:31
+
+NOTE SegmentIndex
+NOTE Segment=598.223 56753@284 351
+NOTE Segment=597.096 52295@57037 322
+NOTE Segment=160.243 11686@109332 74
+NOTE /SegmentIndex
+
+                          
+
+                    
+1
+00:00:05.213 --> 00:00:10.552  position:29.05%,start  align:start size:48.10%  line:10.00% 
+<c.white><c.mono_sans> THIS IS A SAMPLE SENTENCE</c.mono_sans></c.white>
+
+2
+00:00:05.213 --> 00:00:10.552  position:21.43%,start  align:start size:63.33%  line:15.33% 
+<c.white><c.mono_sans>THIS IS ANOTHER SAMPLE SENTENCE </c.mono_sans></c.white>
