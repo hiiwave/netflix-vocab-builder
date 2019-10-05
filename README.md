@@ -25,6 +25,10 @@ Wanna learn vocabulary before/after watching a Netflix series? Then this guide i
 
 Pull requests and issues are more than welcome.
 
+
 ## Disclaimer
 
 This tutorial is for knowledge sharing purpose only. Please be responsible to your actions following your local laws, and ask for written permissions from the content owner (i.e. Netflix) when necessary.
+
+
+## [Changelog](./CHANGELOG.md)
