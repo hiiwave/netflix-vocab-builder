@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Create Changelog
+- Introduce Travis CI
 
 ### Changed
 - `remove_format` now handles more general cases ([#1][i1])
